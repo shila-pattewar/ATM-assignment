@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <div class="atmContainer">
+        <h1>ATM Machine</h1><hr>
+            <div>
+                <div class="balance">
+                <button onclick="checkBalance()">Check Balance</button>
+                <p id="balanceInfo"></p>
+            </div>
+            <div class="withdraw">
+                <button onclick="showWithdrawForm()">Enter Amount to Withdraw</button>
+
+            </div>
+            <div id="withdrawForm" class="hidden">
+                <input type="number" id="withdrawAmount"><br>
+                <button onclick="withdrawCash()">Withdraw</button>
+                <p id="withdrawInfo"></p>
+            </div>
+            <div class="deposit">
+                <button onclick="showDepositForm()">Deposit Cash</button>
+                
+                <div id="depositForm" class="hidden">
+                    <input type="number" id="depositAmount" placeholder="Enter amount to Deposit"><br>
+                    <button onclick="depositCash()">Deposit</button>
+                    <p id="depositInfo"></p>
+                </div>
+        </div>
+
+      </div>
+        
+        <script src="app.js" async defer></script>
+    </body>
+</html>
